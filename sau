@@ -12,7 +12,7 @@
 
     <!-- Reproductor de Video -->
     <video id="my-video" class="video-js vjs-default-skin" controls preload="auto" width="640" height="360">
-        <source src="http://tv.proyectox.vip:8080/lopjorgetv2/B2HcOqCMW0/9606">
+        <source src="http://tv.proyectox.vip:8080/lopjorgetv2/B2HcOqCMW0/9666">
         <p class="vjs-no-js">
             Para ver este video, habilita JavaScript o considera actualizar tu navegador.
         </p>
