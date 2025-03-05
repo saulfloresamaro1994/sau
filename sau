@@ -1,31 +1,41 @@
+> Daniel:
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reproductor de Transmisión en Vivo</title>
-    <!-- Incluir Video.js CSS -->
-    <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
+    <title>Reproducir Stream con Video.js</title>
+    <!-- Incluye los estilos de Video.js -->
+    <link href="https://vjs.zencdn.net/7.15.4/video-js.css" rel="stylesheet" />
+    <style>
+        /* Personaliza el tamaño del reproductor */
+        .video-js {
+            width: 80%;
+            height: auto;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    </style>
 </head>
 <body>
-    <h1>Reproduciendo Transmisión en Vivo</h1>
+    <h1 style="text-align: center;">Reproduciendo Stream con Video.js</h1>
 
-    <!-- Reproductor de Video -->
-    <video id="my-video" class="video-js vjs-default-skin" controls preload="auto" width="640" height="360">
-        <source src="http://tv.proyectox.vip:8080/lopjorgetv2/B2HcOqCMW0/9666">
+    <!-- Reproductor de Video.js -->
+    <video
+        id="my-video"
+        class="video-js vjs-default-skin"
+        controls
+        preload="auto"
+        width="640"
+        height="360"
+        data-setup="{}">
+        <source src="http://tv.proyectox.vip:8080/lopjorgetv2/B2HcOqCMW0/9685" type="application/x-mpegURL">
         <p class="vjs-no-js">
             Para ver este video, habilita JavaScript o considera actualizar tu navegador.
         </p>
     </video>
 
-    <!-- Incluir Video.js y el plugin HLS -->
-    <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/videojs-contrib-hls@5.15.0/dist/videojs-contrib-hls.min.js"></script>
-
-    <script>
-        // Inicializar el reproductor
-        var player = videojs('my-video');
-        player.play(); // Iniciar la reproducción automáticamente
-    </script>
+    <!-- Incluye el script de Video.js -->
+    <script src="https://vjs.zencdn.net/7.15.4/video.js"></script>
 </body>
 </html>
