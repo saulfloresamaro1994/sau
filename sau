@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reproducir Video</title>
+    <title>Reproducir Película MKV</title>
     <style>
         .video-container {
             width: 100%;
@@ -23,9 +23,8 @@
 
     <div class="video-container">
         <video controls>
-            <source src="https://sManpeW5.tnas.link/tos/#/share?share_link=y8ST01kpypywLTvCWummcz9EHimoTKXsNpr7HX6bTYT5UJ4%3D" type="video/mp4">
-            <source src="https://sManpeW5.tnas.link/tos/#/share?share_link=y8ST01kpypywLTvCWummcz9EHimoTKXsNpr7HX6bTYT5UJ4%3D" type="video/ogg">
-            Tu navegador no soporta la reproducción de videos.
+            <source src="https://sManpeW5.tnas.link/tos/#/share?share_link=y8ST01kpypywLTvCWummcz9EHimoTKXsNpr7HX6bTYT5UJ4%3D" type="video/x-matroska">
+            Tu navegador no soporta la reproducción de este formato de video.
         </video>
     </div>
 
