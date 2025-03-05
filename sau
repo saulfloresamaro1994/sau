@@ -4,38 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reproducir Stream con Video.js</title>
-    <!-- Incluye los estilos de Video.js -->
-    <link href="https://vjs.zencdn.net/7.15.4/video-js.css" rel="stylesheet" />
-    <style>
-        /* Personaliza el tamaño del reproductor */
-        .video-js {
-            width: 80%;
-            height: auto;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-    </style>
+    <title>Reproducir Stream</title>
 </head>
 <body>
-    <h1 style="text-align: center;">Reproduciendo Stream con Video.js</h1>
-
-    <!-- Reproductor de Video.js -->
-    <video
-        id="my-video"
-        class="video-js vjs-default-skin"
-        controls
-        preload="auto"
-        width="640"
-        height="360"
-        data-setup="{}">
-        <source src="http://tv.proyectox.vip:8080/lopjorgetv2/B2HcOqCMW0/9685" type="application/x-mpegURL">
-        <p class="vjs-no-js">
-            Para ver este video, habilita JavaScript o considera actualizar tu navegador.
-        </p>
-    </video>
-
-    <!-- Incluye el script de Video.js -->
-    <script src="https://vjs.zencdn.net/7.15.4/video.js"></script>
+    <h1>Reproduciendo Stream</h1>
+    <iframe 
+        src="http://tv.proyectox.vip:8080/lopjorgetv2/B2HcOqCMW0/9685" 
+        width="640" 
+        height="360" 
+        frameborder="0" 
+        allowfullscreen>
+    </iframe>
 </body>
 </html>
