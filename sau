@@ -12,7 +12,7 @@
 
     <!-- Reproductor de Video -->
     <video id="my-video" class="video-js vjs-default-skin" controls preload="auto" width="640" height="360">
-        <source src="http://192.168.1.69:8181/tos/#/share?share_link=E7kSiIi6BBpuK3EjufjIMCqEz3cbbl%2F5KY8hQc8k1OgABnY%3D">
+        <source src="http://192.168.1.69:8181/tos/#/share?share_link=vLcZ%2F1SZQIOTjDnVUY2IECcuhjgdXxNxC97tpU%2FePpd94v4%3D">
         <p class="vjs-no-js">
             Para ver este video, habilita JavaScript o considera actualizar tu navegador.
         </p>
