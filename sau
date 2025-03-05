@@ -1,19 +1,33 @@
-> Daniel:
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reproducir Stream</title>
+    <title>Reproducir Video</title>
+    <style>
+        .video-container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        video {
+            width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
-    <h1>Reproduciendo Stream</h1>
-    <iframe 
-        src="https://sManpeW5.tnas.link/tos/#/share?share_link=y8ST01kpypywLTvCWummcz9EHimoTKXsNpr7HX6bTYT5UJ4%3D" 
-        width="640" 
-        height="360" 
-        frameborder="0" 
-        allowfullscreen>
-    </iframe>
+
+    <div class="video-container">
+        <video controls>
+            <source src="https://sManpeW5.tnas.link/tos/#/share?share_link=y8ST01kpypywLTvCWummcz9EHimoTKXsNpr7HX6bTYT5UJ4%3D" type="video/mp4">
+            <source src="https://sManpeW5.tnas.link/tos/#/share?share_link=y8ST01kpypywLTvCWummcz9EHimoTKXsNpr7HX6bTYT5UJ4%3D" type="video/ogg">
+            Tu navegador no soporta la reproducción de videos.
+        </video>
+    </div>
+
 </body>
 </html>
