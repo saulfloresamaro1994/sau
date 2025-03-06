@@ -1,3 +1,3 @@
 <link href="https://vjs.zencdn.net/7.15.4/video-js.css" rel="stylesheet">
-   <script src="http://192.168.1.69:8181/tos/#/share?share_link=y8ST01kpypywLTvCWummcz9EHimoTKXsNpr7HX6bTYT5UJ4%3D.mkv"></script>
+   <script src="http://95.211.95.114:8096/emby/videos/549232/master.m3u8?DeviceId=93a72cc1-15fd-49a4-bde6-7d64d8674ee3&MediaSourceId=b146a1262ea40908286ae22c6fd4bac6&PlaySessionId=ed62062c51d940cf9a3ccbf13741b4be&api_key=a932d050c2f340b1a1f99bdf26ef5797&VideoCodec=h264,h265,hevc,av1&AudioCodec=mp3,aac&VideoBitrate=59776000&AudioBitrate=224000&MaxWidth=1920&AudioStreamIndex=1&SubtitleStreamIndex=3&SubtitleMethod=Hls&TranscodingMaxAudioChannels=2&SegmentContainer=ts&MinSegments=1&BreakOnNonKeyFrames=True&SubtitleStreamIndexes=3,4,5&ManifestSubtitles=vtt&h264-profile=high,main,baseline,constrainedbaseline,high10&h264-level=62&hevc-codectag=hvc1,hev1,hevc,hdmv&TranscodeReasons=AudioCodecNotSupported"></script>
 
