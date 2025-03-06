@@ -1,3 +1,32 @@
-<link href="https://vjs.zencdn.net/7.15.4/video-js.css" rel="stylesheet">
-   <script src="http://95.211.95.114:8096/emby/videos/549232/master.m3u8?DeviceId=93a72cc1-15fd-49a4-bde6-7d64d8674ee3&MediaSourceId=b146a1262ea40908286ae22c6fd4bac6&PlaySessionId=ed62062c51d940cf9a3ccbf13741b4be&api_key=a932d050c2f340b1a1f99bdf26ef5797&VideoCodec=h264,h265,hevc,av1&AudioCodec=mp3,aac&VideoBitrate=59776000&AudioBitrate=224000&MaxWidth=1920&AudioStreamIndex=1&SubtitleStreamIndex=3&SubtitleMethod=Hls&TranscodingMaxAudioChannels=2&SegmentContainer=ts&MinSegments=1&BreakOnNonKeyFrames=True&SubtitleStreamIndexes=3,4,5&ManifestSubtitles=vtt&h264-profile=high,main,baseline,constrainedbaseline,high10&h264-level=62&hevc-codectag=hvc1,hev1,hevc,hdmv&TranscodeReasons=AudioCodecNotSupported"></script>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproducir Video</title>
+    <style>
+        .video-container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        video {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
 
+    <div class="video-container">
+        <video controls>
+            <source src="ruta/a/tu/video.mp4" type="video/mp4">
+            <source src="http://95.211.95.114:8096/emby/videos/553036/master.m3u8?DeviceId=93a72cc1-15fd-49a4-bde6-7d64d8674ee3&MediaSourceId=e64c277d42ab46367073f58f956da252&PlaySessionId=f050f8cd3d6140f69c9c7bd679769435&api_key=a932d050c2f340b1a1f99bdf26ef5797&VideoCodec=h264,h265,hevc,av1&AudioCodec=mp3,aac&VideoBitrate=59616000&AudioBitrate=384000&MaxWidth=1920&AudioStreamIndex=1&SubtitleStreamIndex=4&SubtitleMethod=Hls&TranscodingMaxAudioChannels=2&SegmentContainer=ts&MinSegments=1&BreakOnNonKeyFrames=True&SubtitleStreamIndexes=3,4,5&ManifestSubtitles=vtt&h264-profile=high,main,baseline,constrainedbaseline,high10&h264-level=62&hevc-codectag=hvc1,hev1,hevc,hdmv&TranscodeReasons=AudioCodecNotSupported">
+            Tu navegador no soporta la reproducción de videos.
+        </video>
+    </div>
+
+</body>
+</html>
