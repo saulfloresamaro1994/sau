@@ -3,29 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reproducir Película MKV</title>
-    <style>
-        .video-container {
-            width: 100%;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        video {
-            width: 100%;
-            height: auto;
-        }
-    </style>
+    <title>Reproducir Stream</title>
 </head>
 <body>
-
-    <div class="video-container">
-        <video controls>
-            <source src="http://tudominio.com/ruta/a/tu/pelicula.mkv" type="video/x-matroska">
-            Tu navegador no soporta la reproducción de este formato de video.
-        </video>
-    </div>
-
+    <h1>Reproduciendo Stream</h1>
+    <iframe 
+        src="http://tv.proyectox.vip:8080/lopjorgetv2/B2HcOqCMW0/9685" 
+        width="640" 
+        height="360" 
+        frameborder="0" 
+        allowfullscreen>
+    </iframe>
 </body>
 </html>
