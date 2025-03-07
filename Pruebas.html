@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reproductor Universal</title>
+    <title>Reproductor de Transmisión</title>
     <style>
         body {
             display: flex;
@@ -26,7 +26,7 @@
     </video>
 
     <script>
-        // Opcional: Agregar lógica adicional para manejar errores o cambiar la fuente de video
+        // Opcional: Manejar errores de carga
         const videoPlayer = document.getElementById('videoPlayer');
         videoPlayer.addEventListener('error', (e) => {
             console.error('Error al cargar el video:', e);
