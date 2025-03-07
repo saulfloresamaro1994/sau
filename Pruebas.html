@@ -3,12 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reproducir Transmisión</title>
+    <title>Reproductor Universal</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #000;
+        }
+        video {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    </style>
 </head>
 <body>
-    <video width="640" height="360" controls>
+    <video id="videoPlayer" controls autoplay>
         <source src="http://tv.proyectox.vip:8080/lopjorgetv2/B2HcOqCMW0/9676" type="application/x-mpegURL">
         Tu navegador no soporta la reproducción de video.
     </video>
+
+    <script>
+        // Opcional: Agregar lógica adicional para manejar errores o cambiar la fuente de video
+        const videoPlayer = document.getElementById('videoPlayer');
+        videoPlayer.addEventListener('error', (e) => {
+            console.error('Error al cargar el video:', e);
+            alert('No se pudo cargar el video. Verifica el enlace.');
+        });
+    </script>
 </body>
 </html>
