@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reproductor de Listas M3U - Multi Formato</title>
+    <title>Reproductor Universal Multi-Formato</title>
     <link href="https://vjs.zencdn.net/8.0.4/video-js.css" rel="stylesheet" />
     <style>
         body {
@@ -116,6 +116,7 @@
 
     <script src="https://vjs.zencdn.net/8.0.4/video.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dashjs/dist/dash.all.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const status = document.getElementById('status');
@@ -188,24 +189,47 @@
                 });
             }
 
-            // Reproducir un canal
+            // Reproducir un canal (soporte multi-formato)
             function playChannel(url) {
-                if (Hls.isSupported()) {
-                    const hls = new Hls();
-                    hls.loadSource(url);
-                    hls.attachMedia(player.tech().el());
-                    hls.on(Hls.Events.MANIFEST_PARSED, function () {
+                const extension = url.split('.').pop().toLowerCase();
+
+                // Detener cualquier reproducción actual
+                player.pause();
+                player.reset();
+
+                // Determinar el tipo de archivo y configurar el reproductor
+                if (extension === 'm3u8' || extension === 'ts') {
+                    // Soporte para HLS (M3U8)
+                    if (Hls.isSupported()) {
+                        const hls = new Hls();
+                        hls.loadSource(url);
+                        hls.attachMedia(player.tech().el());
+                        hls.on(Hls.Events.MANIFEST_PARSED, function () {
+                            status.textContent = 'Reproduciendo...';
+                        });
+                        hls.on(Hls.Events.ERROR, function (event, data) {
+                            handleError('HLS', data);
+                        });
+                    } else if (player.canPlayType('application/vnd.apple.mpegurl')) {
+                        player.src({ src: url, type: 'application/x-mpegURL' });
                         status.textContent = 'Reproduciendo...';
-                    });
-                    hls.on(Hls.Events.ERROR, function (event, data) {
-                        handleError('HLS', data);
-                    });
-                } else if (player.canPlayType('application/vnd.apple.mpegurl')) {
-                    player.src({ src: url, type: 'application/x-mpegURL' });
+                    } else {
+                        status.textContent = 'Tu navegador no soporta HLS.';
+                    }
+                } else if (extension === 'mpd') {
+                    // Soporte para DASH
+                    const dash = dashjs.MediaPlayer().create();
+                    dash.initialize(player.tech().el(), url, true);
+                    status.textContent = 'Reproduciendo...';
+                } else if (['mp4', 'mkv', 'avi', 'mov', 'webm'].includes(extension)) {
+                    // Soporte para formatos de video comunes
+                    player.src({ src: url, type: `video/${extension === 'mkv' ? 'matroska' : extension}` });
                     status.textContent = 'Reproduciendo...';
                 } else {
-                    status.textContent = 'Tu navegador no soporta HLS.';
+                    status.textContent = 'Formato no soportado.';
                 }
+
+                player.play();
             }
 
             // Manejo de errores
